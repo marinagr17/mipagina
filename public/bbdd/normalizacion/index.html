@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="La normalización es un proceso para organizar las tablas y relaciones en una base de datos con el objetivo de:
+Evitar redundancia de datos. Mejorar la integridad de la información. Facilitar las consultas y el mantenimiento. Formas normales principales Primera Forma Normal (1FN)
+Cada columna contiene valores atómicos. No se permiten listas o conjuntos de valores en una sola celda. Segunda Forma Normal (2FN)
+Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Tercera Forma Normal (3FN)
+" />
+<meta name="keywords" content="homepage, blog, informatica, redes" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/bbdd/normalizacion/" />
+
+
+    <title>
+        
+            Normalización de Bases de Datos :: Ping a Marina 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.244183cde1a38e0b08f82c11791181288f9aac1cc9618cd6f4e9e7710c5768ba.css" integrity="sha256-JEGDzeGjjgsI&#43;CwReRGBKI&#43;arBzJYYzW9OnncQxXaLo=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Normalización de Bases de Datos">
+  <meta itemprop="description" content="La normalización es un proceso para organizar las tablas y relaciones en una base de datos con el objetivo de:
+Evitar redundancia de datos. Mejorar la integridad de la información. Facilitar las consultas y el mantenimiento. Formas normales principales Primera Forma Normal (1FN)
+Cada columna contiene valores atómicos. No se permiten listas o conjuntos de valores en una sola celda. Segunda Forma Normal (2FN)
+Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Tercera Forma Normal (3FN)">
+  <meta itemprop="datePublished" content="2025-10-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="105">
+  <meta itemprop="image" content="http://localhost:1313/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/">
+  <meta name="twitter:title" content="Normalización de Bases de Datos">
+  <meta name="twitter:description" content="La normalización es un proceso para organizar las tablas y relaciones en una base de datos con el objetivo de:
+Evitar redundancia de datos. Mejorar la integridad de la información. Facilitar las consultas y el mantenimiento. Formas normales principales Primera Forma Normal (1FN)
+Cada columna contiene valores atómicos. No se permiten listas o conjuntos de valores en una sola celda. Segunda Forma Normal (2FN)
+Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Tercera Forma Normal (3FN)">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/bbdd/normalizacion/">
+  <meta property="og:site_name" content="Ping a Marina">
+  <meta property="og:title" content="Normalización de Bases de Datos">
+  <meta property="og:description" content="La normalización es un proceso para organizar las tablas y relaciones en una base de datos con el objetivo de:
+Evitar redundancia de datos. Mejorar la integridad de la información. Facilitar las consultas y el mantenimiento. Formas normales principales Primera Forma Normal (1FN)
+Cada columna contiene valores atómicos. No se permiten listas o conjuntos de valores en una sola celda. Segunda Forma Normal (2FN)
+Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Tercera Forma Normal (3FN)">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="bbdd">
+    <meta property="article:published_time" content="2025-10-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-02T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-10-02 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                Inicio</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/bbdd">Bases de Datos</a></li><li><a href="/redes">Redes y Virtualización</a></li><li><a href="/seguridad">Seguridad</a></li><li><a href="/sistemas">Administración de Sistemas</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://localhost:1313/bbdd/normalizacion/">Normalización de Bases de Datos</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>La normalización es un proceso para organizar las tablas y relaciones en una base de datos con el objetivo de:</p>
+<ul>
+<li>Evitar redundancia de datos.</li>
+<li>Mejorar la integridad de la información.</li>
+<li>Facilitar las consultas y el mantenimiento.</li>
+</ul>
+<h2 id="formas-normales-principales">Formas normales principales</h2>
+<ol>
+<li>
+<p><strong>Primera Forma Normal (1FN)</strong></p>
+<ul>
+<li>Cada columna contiene valores atómicos.</li>
+<li>No se permiten listas o conjuntos de valores en una sola celda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Segunda Forma Normal (2FN)</strong></p>
+<ul>
+<li>Cumple 1FN.</li>
+<li>Todas las columnas dependen completamente de la clave primaria.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tercera Forma Normal (3FN)</strong></p>
+<ul>
+<li>Cumple 2FN.</li>
+<li>No existen dependencias transitivas entre columnas.</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Ejemplo simple de 1FN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> empleados (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    nombre VARCHAR(<span style="color:#ae81ff">50</span>),
+</span></span><span style="display:flex;"><span>    telefono VARCHAR(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

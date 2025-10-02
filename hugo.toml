@@ -1,0 +1,69 @@
+baseURL = 'https://example.org/'
+languageCode = 'es-es'
+title = 'Ping a Marina'
+theme = 'hello-friend'
+defaultContentLanguage = "es"
+
+[params]
+  dateform        = "Jan 2, 2006"
+
+  # Subtítulo de la home
+  homeSubtitle = "Aprendiendo juntos"
+
+  # Ocultar enlaces a otros posts si se quiere
+  disableReadOtherPosts = false
+
+  # Botones de compartir
+  enableSharingButtons = true
+
+  # Menú de idioma global desactivado (solo español)
+  enableGlobalLanguageMenu = false
+
+  # Metadata para SEO
+  description = "Mi nuevo blog"
+  keywords = "homepage, blog, informatica, redes"
+  images = [""]
+
+# Páginas secundarias
+[taxonomies]
+  category = "blog"
+  tag      = "tags"
+  series   = "series"
+
+# Configuración de idioma español
+[languages]
+  [languages.es]
+    title = "Ping a Marina"
+    keywords = ""
+    readOtherPosts = "Leer otros posts"
+
+    [languages.es.params.logo]
+      logoText = "Inicio"
+      logoHomeLink = "/"
+
+# Menú principal
+# Menú principal adaptado a ASIR sin "Inicio"
+[[menu.main]]
+  identifier = "seguridad"
+  name       = "Seguridad"
+  url        = "/seguridad"
+  weight     = 1
+
+[[menu.main]]
+  identifier = "sistemas"
+  name       = "Administración de Sistemas"
+  url        = "/sistemas"
+  weight     = 2
+
+[[menu.main]]
+  identifier = "redes"
+  name       = "Redes y Virtualización"
+  url        = "/redes"
+  weight     = 3
+
+[[menu.main]]
+  identifier = "basedatos"
+  name       = "Bases de Datos"
+  url        = "/BBDD"
+  weight     = 4
+
