@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://pingamarina.org/'
 languageCode = 'es-es'
 title = 'Ping a Marina'
 theme = 'hello-friend'
@@ -23,6 +23,10 @@ defaultContentLanguage = "es"
   description = "Mi nuevo blog"
   keywords = "homepage, blog, informatica, redes"
   images = [""]
+  
+  # Modo oscuro/claro
+  defaultTheme = "auto"     # "dark", "light", o "auto"
+  EnableThemeToggle = true  # Muestra el botón de cambiar tema
 
 # Páginas secundarias
 [taxonomies]
@@ -40,6 +44,21 @@ defaultContentLanguage = "es"
     [languages.es.params.logo]
       logoText = "Inicio"
       logoHomeLink = "/"
+
+#iconos redes sociales
+[[params.social]]
+  name = "linkedin"
+  url  = "https://www.linkedin.com/in/marina-gracia-ontanilla-79350b30b/"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/marinagr17"
+
+[[params.social]]
+  name = "email"
+  url  = "mailto:marinagraciaontanilla@gmail.com"
+
+
 
 # Menú principal
 # Menú principal adaptado a ASIR sin "Inicio"
