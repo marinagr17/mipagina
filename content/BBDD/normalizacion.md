@@ -27,6 +27,8 @@ La normalización es un proceso para organizar las tablas y relaciones en una ba
 -- Ejemplo simple de 1FN
 CREATE TABLE empleados (
     id INT PRIMARY KEY,
-    nombre VARCHAR(50),
+    nombre VARCHAR(25),
+    apellido1 VARCHAR(25),
+    apellido2 VARCHAR(25),
     telefono VARCHAR(20)
 );

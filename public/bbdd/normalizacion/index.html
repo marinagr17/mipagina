@@ -50,7 +50,7 @@ Cada columna contiene valores atómicos. No se permiten listas o conjuntos de va
 Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Tercera Forma Normal (3FN)">
   <meta itemprop="datePublished" content="2025-10-02T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-10-02T00:00:00+00:00">
-  <meta itemprop="wordCount" content="105">
+  <meta itemprop="wordCount" content="109">
   <meta itemprop="image" content="http://localhost:1313/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -192,7 +192,9 @@ Cumple 1FN. Todas las columnas dependen completamente de la clave primaria. Terc
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Ejemplo simple de 1FN
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> empleados (
 </span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
-</span></span><span style="display:flex;"><span>    nombre VARCHAR(<span style="color:#ae81ff">50</span>),
+</span></span><span style="display:flex;"><span>    nombre VARCHAR(<span style="color:#ae81ff">25</span>),
+</span></span><span style="display:flex;"><span>    apellido1 VARCHAR(<span style="color:#ae81ff">25</span>),
+</span></span><span style="display:flex;"><span>    apellido2 VARCHAR(<span style="color:#ae81ff">25</span>),
 </span></span><span style="display:flex;"><span>    telefono VARCHAR(<span style="color:#ae81ff">20</span>)
 </span></span><span style="display:flex;"><span>);
 </span></span></code></pre></div>

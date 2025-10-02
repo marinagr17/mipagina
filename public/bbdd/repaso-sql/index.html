@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="En esta entrada dejo un ejercicio práctico de repaso en SQL.
+Tabla PRODUCTOS Campo Tipo de dato Restricciones CodProducto NUMBER — Nombre VARCHAR2 (20) — Tipo VARCHAR2 (15) Menaje, Informática o Telefonía PrecioUnitario NUMBER Entre 0 y 5000 Tabla CLIENTES Campo Tipo de dato Restricciones DNI Cliente VARCHAR2 (10) 8 números, un guión y una letra mayúscula Nombre VARCHAR2 (20) — FechaAlta Fecha Debe ser posterior a 2019 País VARCHAR2 (20) Solo España, Italia o Francia Tabla VENTAS Campo Tipo de dato Restricciones CodProducto NUMBER — DNI Cliente VARCHAR2 (10) — FechaVenta Fecha — NumUnidades NUMBER — Ejercicios de SQL Realizar una consulta que muestre el nombre del último producto que compró cada cliente que ha realizado alguna compra en los últimos diez días. (0,5 puntos) ORACLE
+" />
+<meta name="keywords" content="homepage, blog, informatica, redes" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/bbdd/repaso-sql/" />
+
+
+    <title>
+        
+            Repaso SQL :: Ping a Marina 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.244183cde1a38e0b08f82c11791181288f9aac1cc9618cd6f4e9e7710c5768ba.css" integrity="sha256-JEGDzeGjjgsI&#43;CwReRGBKI&#43;arBzJYYzW9OnncQxXaLo=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Repaso SQL">
+  <meta itemprop="description" content="En esta entrada dejo un ejercicio práctico de repaso en SQL.
+Tabla PRODUCTOS Campo Tipo de dato Restricciones CodProducto NUMBER — Nombre VARCHAR2 (20) — Tipo VARCHAR2 (15) Menaje, Informática o Telefonía PrecioUnitario NUMBER Entre 0 y 5000 Tabla CLIENTES Campo Tipo de dato Restricciones DNI Cliente VARCHAR2 (10) 8 números, un guión y una letra mayúscula Nombre VARCHAR2 (20) — FechaAlta Fecha Debe ser posterior a 2019 País VARCHAR2 (20) Solo España, Italia o Francia Tabla VENTAS Campo Tipo de dato Restricciones CodProducto NUMBER — DNI Cliente VARCHAR2 (10) — FechaVenta Fecha — NumUnidades NUMBER — Ejercicios de SQL Realizar una consulta que muestre el nombre del último producto que compró cada cliente que ha realizado alguna compra en los últimos diez días. (0,5 puntos) ORACLE">
+  <meta itemprop="datePublished" content="2025-10-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="338">
+  <meta itemprop="image" content="http://localhost:1313/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/">
+  <meta name="twitter:title" content="Repaso SQL">
+  <meta name="twitter:description" content="En esta entrada dejo un ejercicio práctico de repaso en SQL.
+Tabla PRODUCTOS Campo Tipo de dato Restricciones CodProducto NUMBER — Nombre VARCHAR2 (20) — Tipo VARCHAR2 (15) Menaje, Informática o Telefonía PrecioUnitario NUMBER Entre 0 y 5000 Tabla CLIENTES Campo Tipo de dato Restricciones DNI Cliente VARCHAR2 (10) 8 números, un guión y una letra mayúscula Nombre VARCHAR2 (20) — FechaAlta Fecha Debe ser posterior a 2019 País VARCHAR2 (20) Solo España, Italia o Francia Tabla VENTAS Campo Tipo de dato Restricciones CodProducto NUMBER — DNI Cliente VARCHAR2 (10) — FechaVenta Fecha — NumUnidades NUMBER — Ejercicios de SQL Realizar una consulta que muestre el nombre del último producto que compró cada cliente que ha realizado alguna compra en los últimos diez días. (0,5 puntos) ORACLE">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/bbdd/repaso-sql/">
+  <meta property="og:site_name" content="Ping a Marina">
+  <meta property="og:title" content="Repaso SQL">
+  <meta property="og:description" content="En esta entrada dejo un ejercicio práctico de repaso en SQL.
+Tabla PRODUCTOS Campo Tipo de dato Restricciones CodProducto NUMBER — Nombre VARCHAR2 (20) — Tipo VARCHAR2 (15) Menaje, Informática o Telefonía PrecioUnitario NUMBER Entre 0 y 5000 Tabla CLIENTES Campo Tipo de dato Restricciones DNI Cliente VARCHAR2 (10) 8 números, un guión y una letra mayúscula Nombre VARCHAR2 (20) — FechaAlta Fecha Debe ser posterior a 2019 País VARCHAR2 (20) Solo España, Italia o Francia Tabla VENTAS Campo Tipo de dato Restricciones CodProducto NUMBER — DNI Cliente VARCHAR2 (10) — FechaVenta Fecha — NumUnidades NUMBER — Ejercicios de SQL Realizar una consulta que muestre el nombre del último producto que compró cada cliente que ha realizado alguna compra en los últimos diez días. (0,5 puntos) ORACLE">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="bbdd">
+    <meta property="article:published_time" content="2025-10-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-02T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-10-02 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                Inicio</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/bbdd">Bases de Datos</a></li><li><a href="/redes">Redes y Virtualización</a></li><li><a href="/seguridad">Seguridad</a></li><li><a href="/sistemas">Administración de Sistemas</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://localhost:1313/bbdd/repaso-sql/">Repaso SQL</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>En esta entrada dejo un ejercicio práctico de repaso en SQL.</p>
+<h2 id="tabla-productos">Tabla PRODUCTOS</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Tipo de dato</th>
+          <th>Restricciones</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CodProducto</td>
+          <td>NUMBER</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>Nombre</td>
+          <td>VARCHAR2 (20)</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>Tipo</td>
+          <td>VARCHAR2 (15)</td>
+          <td>Menaje, Informática o Telefonía</td>
+      </tr>
+      <tr>
+          <td>PrecioUnitario</td>
+          <td>NUMBER</td>
+          <td>Entre 0 y 5000</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="tabla-clientes">Tabla CLIENTES</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Tipo de dato</th>
+          <th>Restricciones</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DNI Cliente</td>
+          <td>VARCHAR2 (10)</td>
+          <td>8 números, un guión y una letra mayúscula</td>
+      </tr>
+      <tr>
+          <td>Nombre</td>
+          <td>VARCHAR2 (20)</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>FechaAlta</td>
+          <td>Fecha</td>
+          <td>Debe ser posterior a 2019</td>
+      </tr>
+      <tr>
+          <td>País</td>
+          <td>VARCHAR2 (20)</td>
+          <td>Solo España, Italia o Francia</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="tabla-ventas">Tabla VENTAS</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Tipo de dato</th>
+          <th>Restricciones</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CodProducto</td>
+          <td>NUMBER</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>DNI Cliente</td>
+          <td>VARCHAR2 (10)</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>FechaVenta</td>
+          <td>Fecha</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>NumUnidades</td>
+          <td>NUMBER</td>
+          <td>—</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="ejercicios-de-sql">Ejercicios de SQL</h2>
+<ol>
+<li>Realizar una consulta que muestre el nombre del último producto que compró cada cliente que ha realizado alguna compra en los últimos diez días. (0,5 puntos)</li>
+</ol>
+<p><strong>ORACLE</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(v.numunidades<span style="color:#f92672">*</span>p.PrecioUnitario) <span style="color:#66d9ef">as</span> imtotal
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ventas v, productos p 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> v.codproducto<span style="color:#f92672">=</span>p.codproducto
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> tipo<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;menaje&#39;</span>;	
+</span></span></code></pre></div><p><strong>POSTGRES</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> nombre
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> productos
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> codproducto <span style="color:#66d9ef">in</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> codproducto
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> ventas
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> fechaventa <span style="color:#66d9ef">BETWEEN</span> <span style="color:#66d9ef">current_timestamp</span><span style="color:#f92672">-</span> INTERVAL <span style="color:#e6db74">&#39;10 days&#39;</span> <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">current_timestamp</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><ol start="2">
+<li>Realizar una consulta que muestre el importe total de las compras de productos de Tipo ‘Menaje’ para cada uno de los clientes junto con el nombre de dicho cliente incluyendo aquellos que no han comprado productos de ese tipo. (0,5 puntos)</li>
+</ol>
+<p><strong>ORACLE</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(v.numunidades<span style="color:#f92672">*</span>p.PrecioUnitario) <span style="color:#66d9ef">as</span> imtotal
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ventas v, productos p 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> v.codproducto<span style="color:#f92672">=</span>p.codproducto
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> tipo<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;menaje&#39;</span>;
+</span></span></code></pre></div><p><strong>POSTGRES</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(v.numunidades<span style="color:#f92672">*</span>p.PrecioUnitario) <span style="color:#66d9ef">as</span> imtotal
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ventas v, productos p 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> v.codproducto<span style="color:#f92672">=</span>p.codproducto
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> tipo<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;menaje&#39;</span>;
+</span></span></code></pre></div><ol start="3">
+<li>
+<p>Realizar una vista llamada <strong>‘Productos de Telefonía’</strong> con los siguientes datos: Código del Producto, Nombre del Producto, Importe Total de las Ventas del Producto, Fecha de la última venta del producto y país del primer cliente que lo compró. En la vista solo deben aparecer los artículos de tipo ‘Telefonía’. (1 punto)</p>
+</li>
+<li>
+<p>Muestra los distintos tipos de productos junto al nombre del cliente que ha comprado más unidades de ese tipo de producto en los últimos diez años. (1 punto)</p>
+</li>
+<li>
+<p>Realiza una consulta con operadores de conjuntos que nos diga qué artículos se han vendido tanto en enero como en febrero como en marzo. (0,5 puntos)</p>
+</li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>
