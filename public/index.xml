@@ -6,8 +6,15 @@
     <description>Recent content in Mi Diario ASIR on Ping a Marina</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Thu, 02 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuración de un router (SNAT y DNAT)</title>
+      <link>http://localhost:1313/redes/nat/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/redes/nat/</guid>
+      <description>&lt;h2 id=&#34;qué-vas-a-aprender&#34;&gt;Qué vas a aprender.&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Realiza la configuración de un router Linux&lt;/li&gt;&#xA;&lt;li&gt;Activar el reenvío de paquetes.&lt;/li&gt;&#xA;&lt;li&gt;Configurar reglas SNAT y DNAT.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ejercicio&#34;&gt;Ejercicio.&lt;/h2&gt;&#xA;&lt;p&gt;Creamos el siguiente escenario:&lt;/p&gt;&#xA;&#xA;    &lt;img src=&#34;http://localhost:1313/images/redes/escenario.jpg&#34;  alt=&#34;Escenario&#34;  class=&#34;center&#34;  style=&#34;border-radius: 8px;&#34;  /&gt;&#xA;&#xA;&#xA;&lt;p&gt;Llamaremos a las máquinas de la siguiente manera:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;La máquina &lt;em&gt;router&lt;/em&gt; la llamaremos &lt;strong&gt;router.tunombre.org&lt;/strong&gt;, y tendrá una distribución &lt;strong&gt;Debian&lt;/strong&gt; sin entorno gráfico.&lt;/li&gt;&#xA;&lt;li&gt;La máquina &lt;em&gt;Servidor Web&lt;/em&gt; la llamaremos &lt;strong&gt;web.tunombre.org&lt;/strong&gt;, y tendrá una distribución &lt;strong&gt;Ubuntu Server&lt;/strong&gt; (sin entorno gráfico).&lt;/li&gt;&#xA;&lt;li&gt;El &lt;em&gt;cliente1&lt;/em&gt; la llamaremos &lt;strong&gt;cliente1.tunombre.org&lt;/strong&gt;, y tendrá una distribución &lt;strong&gt;Fedora&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;El &lt;em&gt;cliente2&lt;/em&gt; la llamaremos &lt;strong&gt;cliente2.tunombre.org&lt;/strong&gt;, y tendrá un sistema operativo &lt;strong&gt;Windows 11&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Tendremos 3 redes:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Normalización de Bases de Datos</title>
       <link>http://localhost:1313/bbdd/normalizacion/</link>

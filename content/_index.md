@@ -2,7 +2,7 @@
 title = "Mi Diario ASIR"
 +++
 
-Bienvenido a mi diario de personal de ASIR.  
+Bienvenido a mi diario personal de ASIR.  
 Aquí voy subiendo todo lo que voy estudiando y practicando: seguridad, administración de base de datos, sistemas y más.
 
 {{< image src="/images/foto1.jpg" alt="Mi Diario ASIR" position="center" style="border-radius: 8px;" >}}

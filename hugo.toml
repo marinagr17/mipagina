@@ -75,7 +75,7 @@ defaultContentLanguage = "es"
   weight     = 2
 
 [[menu.main]]
-  identifier = "redes"
+  identifier = "redesyvirtualizacion"
   name       = "Redes y Virtualización"
   url        = "/redes"
   weight     = 3
