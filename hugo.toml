@@ -1,4 +1,4 @@
-baseURL = 'https://pingamarina.org/'
+baseURL = 'https://pingamarina.netlify.app/'
 languageCode = 'es-es'
 title = 'Ping a Marina'
 theme = 'hello-friend'
