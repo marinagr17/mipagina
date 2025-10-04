@@ -5,7 +5,7 @@ title = 'Repaso PL/SQL'
 +++
 
 
-** Nota importante: Es imprescindible la correcta división del código en los módulos correspondientes y se valorará la legibilidad del código y el uso del menor número posible de consultas al servidor. **
+**Nota importante: Es imprescindible la correcta división del código en los módulos correspondientes y se valorará la legibilidad del código y el uso del menor número posible de consultas al servidor.**
 
 ## Ejercicio 1
 
