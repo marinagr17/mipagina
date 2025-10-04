@@ -90,3 +90,25 @@ AND tipo='menaje';
 4. Muestra los distintos tipos de productos junto al nombre del cliente que ha comprado más unidades de ese tipo de producto en los últimos diez años. (1 punto)
 
 5. Realiza una consulta con operadores de conjuntos que nos diga qué artículos se han vendido tanto en enero como en febrero como en marzo. (0,5 puntos)
+
+**ORACLE y POSTGRES**
+
+```sql
+SELECT nombre 
+from productos 
+where codproducto in (select codproducto
+                      from ventas 
+                      where TO_CHAR(fechaventa,'MM')='01')
+UNION
+SELECT nombre 
+from productos 
+where codproducto in (select codproducto
+                      from ventas 
+                      where TO_CHAR(fechaventa,'MM')='02')
+UNION
+SELECT nombre 
+from productos 
+where codproducto in (select codproducto
+                      from ventas 
+                      where TO_CHAR(fechaventa,'MM')='03');
+```
