@@ -99,13 +99,13 @@ from productos
 where codproducto in (select codproducto
                       from ventas 
                       where TO_CHAR(fechaventa,'MM')='01')
-UNION
+INTERSECT
 SELECT nombre 
 from productos 
 where codproducto in (select codproducto
                       from ventas 
                       where TO_CHAR(fechaventa,'MM')='02')
-UNION
+INTERSECT
 SELECT nombre 
 from productos 
 where codproducto in (select codproducto
