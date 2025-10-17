@@ -295,11 +295,11 @@ Podemos exportar los informes del escáner.
 
 Nos genera informes según clasifica las vulnerabilidades. 
 Entre las más destacadas aparecen:
-    - Debilidad en el generador de números aleatorios de OpenSSH/OpenSSL (Debian), que compromete la fortaleza de las claves criptográficas.
-    - Protocolos SSL 2.0 y 3.0 activos, que ya no son seguros y deben deshabilitarse.
-    - Vulnerabilidad “Ghostcat” en Apache Tomcat, que permite la inyección de peticiones a través del conector AJP.
-    - Puerta trasera detectada (Bind Shell Backdoor) que indica una posible intrusión.
-    - Sistema operativo Ubuntu 8.04.x sin soporte (EoL), lo que lo hace vulnerable al no recibir actualizaciones.
+* Debilidad en el generador de números aleatorios de OpenSSH/OpenSSL (Debian), que compromete la fortaleza de las claves criptográficas.
+* Protocolos SSL 2.0 y 3.0 activos, que ya no son seguros y deben deshabilitarse.
+* Vulnerabilidad “Ghostcat” en Apache Tomcat, que permite la inyección de peticiones a través del conector AJP.
+* Puerta trasera detectada (Bind Shell Backdoor) que indica una posible intrusión.
+* Sistema operativo Ubuntu 8.04.x sin soporte (EoL), lo que lo hace vulnerable al no recibir actualizaciones.
 El host analizado (192.168.122.247) presenta un total de 172 vulnerabilidades, de las cuales 10 son críticas. El informe también incluye un apartado de remediaciones sugeridas, donde se recomiendan acciones para mitigar los riesgos detectados, como actualizar servicios (BIND, Samba), eliminar software malicioso o reinstalar aplicaciones comprometidas. En conjunto, este informe proporciona una visión general del estado de seguridad del sistema, permitiendo priorizar las correcciones necesarias para reducir la superficie de ataque.
 Escaneo por pluggin:
 
