@@ -15,7 +15,7 @@ con algunas limitaciones en comparación con las versiones de pago.
 
 Para descargarnos el paquete nos vamos a la página de [Nessus](https://www.tenable.com/downloads/nessus?loginAttempted=true):
 
-(static/images/seguridad/nessus1.png)
+(/images/seguridad/nessus1.png)
 
 Una vez que tenemos el .deb lo instalamos con dpkg:
 ```bash
@@ -31,15 +31,15 @@ tcp   LISTEN 0      1024                                 [::]:8834 [::]:*    use
 ```
 Nos vamos al navegador para poder configurar Nessus:
 
-(static/images/seguridad/nessus2.png)
+(/images/seguridad/nessus2.png)
 
 A continuación, nos ofrece una serie de opciones:
-(static/images/seguridad/nessus3.png)
+(/images/seguridad/nessus3.png)
 
 En este caso, vamos a elegir Nessus Essentials, ya que es la versión gratuita para uso personal/educativo. La limitación que encontraremos será el número de IPs que se pueden escanear. Nos registramos:
 
-(static/images/seguridad/nessus4.png)
+(/images/seguridad/nessus4.png)
 
 Una vez hecho esto, esperamos a que se descarguen todos los pluggins, y a continuación nos aparecerá la pantalla de incio de Nessus.
-(static/images/seguridad/nessus5.png)
+(/images/seguridad/nessus5.png)
 
