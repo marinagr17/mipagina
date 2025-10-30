@@ -86,3 +86,8 @@ defaultContentLanguage = "es"
   url        = "/BBDD"
   weight     = 4
 
+[[menu.main]]
+  identifier = "prueba"
+  name       = "Prueba"
+  url        = "/prueba"
+  weight     = 5
