@@ -431,7 +431,7 @@ sudo nano /etc/openvpn/client/sitio2.conf
 ```
 
 Contenido:
-```conf
+```bash
 client
 dev tun
 proto udp
