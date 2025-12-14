@@ -11,7 +11,7 @@ graph TD
     VPN["Servidor VPN<br>IP Túnel: 5.168.1.100/24 ↔ 5.168.1.102/24<br>Red VPN interna: 10.99.99.0/24"]
     NAT2["NAT2 (10.99.70.2/24)"]
     R2["Router r2 (10.60.60.1/24)"]
-    Cliente2["Cliente2"]
+    Cliente2["Cliente2 (10.60.60.2/24)"]
 
     NAT1 --> R1
     R1 --> Cliente1
