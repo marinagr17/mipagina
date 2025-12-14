@@ -231,32 +231,36 @@ Aplicar cambios:
 sudo sysctl -p
 ```
 
-### 2.4 Configurar Firewall (UFW)
+### 2.4 Configurar Firewall
 
 ```bash
 # En el Servidor VPN
-# Permitir tráfico OpenVPN
-sudo ufw allow 1194/udp
 
-# Configurar NAT para el túnel
-sudo nano /etc/ufw/before.rules
-```
+# 1. Permitir tráfico OpenVPN entrante
+sudo iptables -A INPUT -p udp --dport 1194 -j ACCEPT
 
-Añadir antes de las reglas `*filter`:
-```bash
-# NAT table rules
-*nat
-:POSTROUTING ACCEPT [0:0]
-# Forward traffic from OpenVPN to eth0
--A POSTROUTING -s 10.99.99.0/24 -o ens6 -j MASQUERADE
-COMMIT
-```
+# 2. Permitir tráfico establecido y relacionado
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-Reiniciar UFW:
-```bash
-# En el Servidor VPN
-sudo ufw disable
-sudo ufw enable
+# 3. Permitir forward desde el túnel VPN hacia la red local
+sudo iptables -A FORWARD -s 10.99.99.0/24 -j ACCEPT
+
+# 4. Permitir forward desde las redes remotas
+sudo iptables -A FORWARD -s 10.50.50.0/24 -j ACCEPT
+sudo iptables -A FORWARD -s 10.60.60.0/24 -j ACCEPT
+
+# 5. Configurar NAT/MASQUERADE para el túnel VPN
+sudo iptables -t nat -A POSTROUTING -s 10.99.99.0/24 -o ens6 -j MASQUERADE
+
+# 6. Permitir tráfico en la interfaz tun0
+sudo iptables -A INPUT -i tun0 -j ACCEPT
+sudo iptables -A FORWARD -i tun0 -j ACCEPT
+sudo iptables -A FORWARD -o tun0 -j ACCEPT
+
+# 7. Verificar las reglas
+sudo iptables -L -v -n
+sudo iptables -t nat -L -v -n
 ```
 
 ### 2.5 Crear Directorio de Logs
