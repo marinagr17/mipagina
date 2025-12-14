@@ -4,22 +4,25 @@
 
 **Objetivo:** Conectar Cliente1 (10.50.50.2/24) con Cliente2 (10.60.60.2/24) a través de un túnel VPN site-to-site usando el servidor VPN como punto central.
 
-flowchart TD
-    NAT1["textNAT1<br>10.99.80.2/24"]
-    R1["Router r1<br>10.50.50.1/24"]
-    Cliente1["Cliente1<br>10.50.50.2/24"]
-    VPN["Servidor VPN<br>Túnel: 5.168.1.100/24 ↔ 5.168.1.102/24<br>Red VPN: 10.99.99.0/24"]
-    NAT2["NAT2<br>10.99.70.2/24"]
-    R2["Router r2<br>10.60.60.1/24"]
-    Cliente2["Cliente2<br>10.60.60.2/24"]
+### Topología de Red
 
-    NAT1 --> R1
-    R1 --> Cliente1
-    Cliente1 --> VPN
-    VPN --> NAT2
-    NAT2 --> R2
-    R2 --> Cliente2
+```
+NAT1 (10.99.80.2/24)
+  ↓
+Router r1 (10.50.50.1/24)
+  ↓
+Cliente1 (10.50.50.2/24)
 
+Servidor VPN
+  - IP Túnel: 5.168.1.100/24 ↔ 5.168.1.102/24
+  - Red VPN interna: 10.99.99.0/24
+
+NAT2 (10.99.70.2/24)
+  ↓
+Router r2 (10.60.60.1/24)
+  ↓
+Cliente2 (10.60.60.2/24)
+```
 
 ### Máquinas en el Escenario
 
