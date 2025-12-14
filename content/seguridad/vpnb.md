@@ -6,7 +6,7 @@
 
 ### Topología de Red
 
-```
+```bash
 NAT1 (10.99.80.2/24)
   ↓
 Router r1 (10.50.50.1/24)
@@ -714,7 +714,7 @@ sudo crontab -e
 ```
 
 Añadir:
-```cron
+```bash
 */5 * * * * /usr/local/bin/vpn-monitor.sh
 ```
 
