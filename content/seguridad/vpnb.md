@@ -122,7 +122,7 @@ sudo nano /etc/openvpn/server/server.conf
 
 Contenido del archivo:
 
-```conf
+```bash
 # Puerto y protocolo
 port 1194
 proto udp
@@ -195,7 +195,7 @@ sudo nano /etc/openvpn/server/ccd/sitio1
 ```
 
 Contenido:
-```conf
+```bash
 iroute 10.50.50.0 255.255.255.0
 ifconfig-push 10.99.99.10 255.255.255.0
 ```
@@ -207,7 +207,7 @@ sudo nano /etc/openvpn/server/ccd/sitio2
 ```
 
 Contenido:
-```conf
+```bash
 iroute 10.60.60.0 255.255.255.0
 ifconfig-push 10.99.99.20 255.255.255.0
 ```
@@ -221,7 +221,7 @@ sudo nano /etc/sysctl.conf
 ```
 
 Descomentar o añadir:
-```conf
+```bash
 net.ipv4.ip_forward=1
 ```
 
@@ -243,7 +243,7 @@ sudo nano /etc/ufw/before.rules
 ```
 
 Añadir antes de las reglas `*filter`:
-```conf
+```bash
 # NAT table rules
 *nat
 :POSTROUTING ACCEPT [0:0]
@@ -314,7 +314,7 @@ sudo nano /etc/openvpn/client/sitio1.conf
 ```
 
 Contenido:
-```conf
+```bash
 # Cliente
 client
 dev tun
@@ -363,7 +363,7 @@ sudo nano /etc/sysctl.conf
 ```
 
 Añadir:
-```conf
+```bash
 net.ipv4.ip_forward=1
 ```
 
@@ -460,7 +460,7 @@ sudo nano /etc/sysctl.conf
 ```
 
 Añadir:
-```conf
+```bash
 net.ipv4.ip_forward=1
 ```
 
@@ -673,7 +673,7 @@ sudo nano /etc/logrotate.d/openvpn
 ```
 
 Contenido:
-```conf
+```bash
 /var/log/openvpn/*.log {
     weekly
     rotate 4
